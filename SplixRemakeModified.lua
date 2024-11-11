@@ -280,35 +280,13 @@ do
 			end
 		end
 		--
-local TweenService = game:GetService("TweenService")
-local player = game.Players.LocalPlayer
-local screenGui = player.PlayerGui:WaitForChild("ScreenGui")
-local blurEffect = Instance.new("BlurEffect")
-local imageLabel = Instance.new("ImageLabel")
-
-blurEffect.Size = 24
-blurEffect.Parent = game.Lighting
-
-imageLabel.Size = UDim2.new(0, 200, 0, 200)
-imageLabel.Position = UDim2.new(0.5, -100, 0.5, -100)
-imageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-imageLabel.Image = "rbxassetid://17250498039"
-imageLabel.Visible = false
-imageLabel.Parent = screenGui
 
 function Library:SetOpen(bool)
-    if typeof(bool) == 'boolean' then
-        Library.Open = bool
-        Library.Holder.Visible = bool
-        if bool then
-            blurEffect.Enabled = true
-            imageLabel.Visible = true
-        else
-            blurEffect.Enabled = false
-            imageLabel.Visible = false
-        end;
-    end;
-end;
+			if typeof(bool) == 'boolean' then
+				Library.Open = bool;
+				Library.Holder.Visible = bool;
+			end
+		end;
 
 		--
 		function Library:IsMouseOverFrame(Frame)
